@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Weather API </title>
+<link rel="icon" type="gif" href="images/main.svg">
+	<link rel="stylesheet" href="jquery/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="jquery/jquery-ui.js"></script>
+	<link rel="stylesheet" href="css/header.css">
+</head>
+<body>
+	
+		<div id="back_video">
+		<video id="videotag" preload="auto"  autoplay="true" loop="loop" muted="muted">
+		<source src="Rain%20-%20305.mp4" type="video/mp4">
+		</video></div>
+	<div id="body">
+	<div>
+	<div id="weather"><h1><img src="images/headicon.svg" style="height:65px; weidth:65px; margin-left:10px; position:relative;"/> Weather..! of Cincy</h1></div>
+		<div id="heading">
+			<header id="head">
+				<button id="today" onclick="today()">TODAY</button>
+				<button id="historical" onclick="perticularday()">HISTORICAL</button>
+				<button id="forecast" onclick="forecast()">FORECAST</button>
+				
+			</header>
+		</div>
+		<div id="fig"><center>
+		<figure class="icons">
+		<canvas id="clear-day" width="75" height="75">        </canvas>
+        <canvas id="clear-night" width="75" height="75">        </canvas>
+        <canvas id="partly-cloudy-day" width="75" height="75">        </canvas>
+        <canvas id="partly-cloudy-night" width="75" height="75">        </canvas>
+        <canvas id="cloudy" width="75" height="75">        </canvas>
+        <canvas id="rain" width="75" height="75">        </canvas>
+        <canvas id="sleet" width="75" height="75">        </canvas>
+        <canvas id="snow" width="75" height="75">        </canvas>
+        <canvas id="wind" width="75" height="75">        </canvas>
+        <canvas id="fog" width="75" height="75">        </canvas>
+			
+	</figure></center>
+		</div>
+	<div id="datebox1">
+		
+		</div><div id="datebox2"></div>
+	<div id="location"></div>	
+	</div>
+		
+		<div id="iconCreated"></div>
+			
+			
+	<script id="handleb" type="text/x-handlebars-template">
+
+{{#each this}}
+	<fieldset>				
+	<p>Date: <b>{{changeDate DATE}}</b></p><br/>
+	<img src="images/{{ICON}}.svg" style="float:right; height:50px; weidth:50px; padding-right:20px;"/>
+		<p><center><b>{{SUMMARY}}</b></center><p>
+	<ul>			
+	<li><p>Minimum: <b>{{TMIN}}</b><p></li>
+	<li><p>Maximum: <b>{{TMAX}}</b><p></li>
+	</ul>
+	</fieldset>
+{{/each}}
+		</script>
+	<script id="handl_today" type="text/x-handlebars-template">
+	{{#each this}}
+	<fieldset id='h1'>
+		<p>Date: <b>{{changeDate DATE}}</b></p><br/>
+		{{#if this.ICON}}
+		<img src="images/{{ICON}}.svg" style="float:right; height:50px; weidth:450px; padding-right:20px;"/>
+		<p><center><b>{{SUMMARY}}</b></center></p>	
+		{{/if}}
+		<ul>
+		<li><p>Minimum: <b>{{TMIN}}</b><p></li>
+		<li><p>Maximum: <b>{{TMAX}}</b><p></li>
+		</ul>
+	</fieldset>
+	{{/each}}
+		</script>
+		<div id="todayDisplay">
+		<script id="todayd" type="text/x-handlebars-template">
+	<fieldset id='h2'>
+		<p>Date: <b>{{changeDate this.0.DATE}}</b></p><br/>
+		<img src="images/{{this.1.ICON}}.svg" style="float:right; height:50px; weidth:50px; padding-right:20px;"/>
+		<p><center><b>{{this.0.SUMMARY}}</b></center></p>	
+
+		<ul>
+		<li><p>Minimum: <b>{{this.0.TMIN}}</b><p></li>
+		<li><p>Maximum: <b>{{this.0.TMAX}}</b><p></li>
+		</ul>
+	</fieldset>
+		</script>
+		</div>
+		
+		
+	<script src="js/handlebars-v4.0.5.js"></script>		
+	<script src="js/skycons.js"></script>
+	<script src="js/today.js"></script>
+	<script src="js/forecastweather.js"></script>
+ 	<script src="js/canvasjs.min.js"></script>
+	
+	
+<center>
+	
+	<div id="chartContainer" style="height: 300px; width: 50%; ">
+  
+		<br/>
+	</div>
+</center>
+</div>
+<footer>
+	
+	<div id="foot">
+		
+		<h4 style="padding-bottom:10px;">Copie R8's</h4>
+		<h4>Author: <i>Sravan Kumar, Adepu</i></h4>
+		<h4>Email: <i>adepusr@mail.uc.edu</i> </h4>
+		<h4>M#: <i>10725136</i></h4>
+		
+	</div>
+</footer>
+
+</body>
+</html>
+	

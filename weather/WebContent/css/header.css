@@ -1,0 +1,152 @@
+body{
+	margin: 10px;
+	margin-left: 90px;
+	margin-right: 90px;
+}
+#body{
+	background-image: url("images/back.jpg");
+	padding: 15px;
+	margin: 30px;
+	min-height: 55%;
+}
+#head{
+	border-radius: 5px;
+	padding: 10px;
+}
+p{
+	font-family: cursive;
+	font-size: 20px;
+}
+b{
+	font-size:22px;
+}
+
+fieldset{
+	margin: 14px;
+	margin-left: 15%;
+	margin-right: 15%;
+	padding: 20px;
+	padding-left: 10%;
+	background-color: #d0d3d8;
+	border: 5px solid gray;
+	border-top-right-radius: 40px;
+	border-bottom-right-radius: 40px;
+	border-bottom-left-radius: 40px;
+	color: black;
+}
+li{
+	margin: 5px;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	font-family: cursive;
+	font-size: 16px;
+}
+#fig {
+	padding-top: 35px;
+	width: auto;
+	height: 70px;
+	position: relative;
+}
+#today,#historical,#forecast{
+	background-color: dimgray;
+    border: none;
+    color: white;
+	margin-right: 25px;
+    padding: 12px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+	position: relative;
+}
+#today:hover,#historical:hover,#forecast:hover{
+	background-color: gray;
+    border: none;
+    color: white;
+    padding: 11px 38px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 17px;
+}
+*{
+	margin:0;
+	padding: 0;
+}
+#back_video{
+	position: fixed;
+	z-index: -1000;
+	width: 100%;
+	height: 100%;
+	overflow:hidden;
+	top: 0;
+	left: 0;
+}
+#datesubmit{
+	background-color: dimgray;
+    border: none;
+    color: white;
+    padding: 12px 29px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+	margin-left: 20px;
+    font-size: 14px;	
+}
+#datesubmit:hover{	
+	background-color: gray;
+    border: none;
+    color: white;
+    padding: 12px 27px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+	
+}
+h1{
+	padding-top: 5px;
+	padding-bottom: 10px;
+	font-family:sans-serif;
+}
+label{
+	color: whitesmoke;
+	font-family:sans-serif;	
+}
+#weather{
+	min-height: 7%;
+	color: whitesmoke;
+}
+h4{
+	font-family:monospace;
+}
+#dp{
+	padding: 10px;
+	border: 3px solid dimgray;
+    border-radius: 5px;
+}
+
+#dp:hover{
+	padding: 9px;
+	border: 3px solid gray;
+    border-radius: 5px;
+}
+label{
+	margin-left:30px;
+	padding-bottom: 20px;
+	margin-right: 25px;
+}
+#foot{	
+	display: table-row;
+	height: 25px;
+	
+}
+footer{
+	padding: 20px;
+	height: auto;
+	background: #d0d3d8;
+	margin: 30;
+}
+#chart_back{
+	backface-visibility: hidden;
+}
