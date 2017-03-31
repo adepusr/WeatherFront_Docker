@@ -33,11 +33,11 @@ Start the docker service (as root): service docker start </br>
 	</br>
 4. Entered the Bash for the base container created using
 </br> 
-$ docker exec -it /createdcontainerId/ bash
+	$ docker exec -it /createdcontainerId/ bash
 </br>
-$ apt-get update   //updates packages
+	$ apt-get update   //updates packages
 </br>
-$ apt-get install vim //installs Vim editor
+	$ apt-get install vim //installs Vim editor
 </br>
 5. Changing portfrom 8080 to 80 in /confi/server.xml
 </br>
