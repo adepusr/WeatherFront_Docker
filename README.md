@@ -14,7 +14,7 @@ $ sudo service docker start </br>
 $ sudo usermod -a -G docker ec2-user </br>
 Start the docker service (as root): service docker start </br>
 
-2.	Docker load -i cloudfinal.tar </br>
+2.	Docker load -i webserver.tar </br>
 //new image will be created and displays the container id.</br>
 
 3.	Copy the newly created IMAGEid (visible below the docker load command).</br>
